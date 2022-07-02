@@ -17,7 +17,7 @@ public class VariablesAndOperations {
 		boolean isHotOutside = false;
 		
 		//create a variable to hold a customer's first name
-		String firstName = "Asha";
+		String firstName = "Asha ";
 		
 		//Create a variable to hold a street address
 		String streetAddress = "120 Larkspur ln.";
@@ -31,7 +31,33 @@ public class VariablesAndOperations {
 		System.out.println(streetAddress + " is where the customer lives.");
 		
 		//A customer booked two plane seats, remove 2 seats from the available seats variable
+		availablePlaneSeats = availablePlaneSeats - 2; 
+		availablePlaneSeats -= 2; //shorthand for variable itself minus 2
+		System.out.println(availablePlaneSeats);
 		
+		// impulse candy bar purchase, add 2.15 to the grocery total
+		costOfGroceries = costOfGroceries + 2.15;
+		costOfGroceries += 2.15; //shorthand version
+		System.out.println(costOfGroceries);
+		
+		//birth certificate was printed incorrectly, change the middle initial to something else
+		middleInitial = 'D'; //assign a new value to the variable 
+		System.out.println(middleInitial);
+		
+		//the season has changed, update the host outside variable to be opposite of what it was
+		isHotOutside = true;
+		isHotOutside = !isHotOutside; // ! negates any boolean value, also the last value assigned overrides the rest of values assigned to the same variable
+		System.out.println(isHotOutside);
+		
+		//create a new variable called full name using the customer's first name, the middle initial, and a last name of your choice
+		String lastName = " Abdulkadir";
+		String fullName = firstName + middleInitial + lastName ;
+		System.out.println(fullName);
+		
+		// Alternatively String fullName = firstName + " " + middleInitial + " Abdulkadir" ;
+		
+		//print a line to the console that introduces the customer and says they live at the address variable 
+		 System.out.println("Hello, I'm  " +fullName + " and I live at " + streetAddress);
 		
 		
 
