@@ -69,8 +69,62 @@ public class BooleanConditionalsLoops {
 			System.out.println("Sad Face");
 		}
 		
-
+		//Create a variable called loyaltyMemberStatus and assign the value "SILVER"
+		//Create a variable called loyaltyMemberDiscount and assign the value 0.0
+		//using a switch set the value of loyaltyMemberDiscount based on the following loyaltyMemberStatus scale
+		//"SILVER" is 0.10, "GOLD" is 0.15, and "PLATINUM" is 0.25
 		
+		String loyaltyMemberStatus ="SILVER";
+		double loyaltyMemberDiscount = 0.0;
+		
+		//switch(variable){case: statement; break; default;}
+		
+		switch(loyaltyMemberStatus) {
+			case "SILVER": 
+				loyaltyMemberDiscount = .10;
+				break;
+			case "GOLD":
+				loyaltyMemberDiscount = .15;
+				break;
+			case "PLATINUM":
+				loyaltyMemberDiscount = .25;
+				break;
+		}
+		
+		System.out.println(loyaltyMemberDiscount);		
+		   
+	//create a variable called billTotal and assign a value
+	//create a variable called adjustedTotal and assign it the billTotal minus the loyatyMemberDiscount percent of the billTotal
+	//if the adjustedBillTotal is greater than $500 upgrade the loyaltyMemberStatus from SILVER to GOLD to PLATINUM
+	
+	double billTotal = 640.50;
+	double adjustedTotal = billTotal - loyaltyMemberDiscount * billTotal;
+	System.out.println(adjustedTotal);
+	
+	if (adjustedTotal > 500) {
+		if (loyaltyMemberStatus == "SILVER") {
+			loyaltyMemberStatus = "Gold";
+			} else if (loyaltyMemberStatus == "GOLD") {
+			loyaltyMemberStatus = "PLATINUM";
+		  }
+		}
+	 System.out.println(loyaltyMemberStatus);
+	 
+	 //create two variables username and password
+	 //create a conditional that prints "login successful" if the username is Tommy123 and the password is "12345"
+	//print access denied
+	 
+	 
+	 String username = "Tommy123";
+	 String password = "12345";
+	 
+	 if (username == "Tommy123" && password == "12345") {
+		 System.out.println("Login Successful");
+	 } else {
+		 System.out.println("Acess denied.");
+	 }
+	 
+	 
 	}
-
 }
+
