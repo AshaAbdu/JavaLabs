@@ -112,7 +112,9 @@ public class BooleanConditionalsLoops {
 	 
 	 //create two variables username and password
 	 //create a conditional that prints "login successful" if the username is Tommy123 and the password is "12345"
-	//print access denied
+	 //print access denied
+	 // also use .equals instead of equality operator 
+	 //i.e if(userName.equals("Tommy123") && password.equals("12345"))
 	 
 	 
 	 String username = "Tommy123";
@@ -121,8 +123,46 @@ public class BooleanConditionalsLoops {
 	 if (username == "Tommy123" && password == "12345") {
 		 System.out.println("Login Successful");
 	 } else {
-		 System.out.println("Acess denied.");
+		 System.out.println("Access denied.");
 	 }
+	 
+	 //write a for loop that prints each number from 0 to 9
+	 for (int i= 0; i <10; i++) {
+		 System.out.println(i);
+	 }
+	 
+	 //write a for loop that prints each number from the 10 to 0 backwards
+	 for (int p= 10; p >=0; p--) {
+		 System.out.println(p);
+	 }
+	 
+	 //write a for loop that prints every other number from 0 to 100
+	 for (int c= 0; c <= 100; c += 2) {
+		 System.out.println(c);
+	 }
+	 /*alternatively. for (int c=0; c<= 100; c++){
+	  * if (c% 2 == 0) {
+	  * sysout(c) }
+	  * less efficient format */
+	 
+	 //write a for loop that iterates from 0 to 100 and prints "EVEN" if the number is even and "ODD" if it's odd
+	 //to inclue the number...variable concat b + "even/odd"
+	 for (int b= 0; b<=100; b++) {
+		 if(b %2 == 0) {
+			 System.out.println(b + " Even");
+		 } else {
+			 System.out.println(b + " Odd");
+		 }
+	 }
+	 
+	 //write a while loop that starts at 100 and iterates backwards by 1 until it reaches 0
+	 //divide each number by 3 and print the remainder to the console
+	 int f =100;
+	 while (f > 0) {
+		 System.out.println(f + " " + (f% 3));
+		 f--;
+	 }
+	 
 	 
 	 
 	}
