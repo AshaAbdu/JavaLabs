@@ -67,8 +67,54 @@ public class ArraysAndMethods {
 		}
 		System.out.println(sumOfLetters);
 
+		//write and test a method that takes a String name and prints out a greeting, this method returns nothing
+		greet ("Tom");
+		greet ("Asha");
+		//write and test a method that takes a String name and return a greeting, do not print in the method
+		//alternatively: System.out.println(greet2 ("Nick"));
+		String greeting = greet2 ("Nick");
+		System.out.println(greeting);
 		
+		//analyze the difference between two methods - what do you find? How are they different?
+		
+		/*
+		 * one prints out something and the second returns something
+		 */
+		
+		//write and test a method that takes a String and an int and returns true if the number of letters in the string is greater than the int
+		System.out.println(isStringGreaterThanNumber("Hello", 3)); //change to 6 prints false 
+		
+		//write and test a method that takes an array of string and a string and returns true if the String passed in exists in the array
+		System.out.println(doesArrayContainString(names, "Hello"));
+		
+		//write and test a method that takes an array of int and returns the smallest number in the array
+		
+		// write and test a method that takes an array of double and returns the average
 		
 	}
-
+	//methods
+  public static void greet(String name) {
+	System.out.println("Hello, " + name + "!");
+}
+  public static String greet2(String name) {
+	  return "Hi, " + name + "!";
+  }
+  public static boolean isStringGreaterThanNumber (String string, int Number) {
+	  // get rid of if else statement all together and use return to get same result : return string.length() > number;
+	 if (string.length() > Number) {
+		 return true;
+	 } else {
+		 return false; // get rid of else statement and get same result
+	 }
+  }
+	 
+  public static boolean doesArrayContainString(String[] array, String string) {
+	  for (String str : array) {
+		  if (str.equals(string)) {
+			  return true;
+		  }
+	  }
+	  return false;
+  }
+	  
 }
